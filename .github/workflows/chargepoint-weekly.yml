@@ -30,7 +30,7 @@ jobs:
           CP_USERNAME: ${{ secrets.CP_USERNAME }}
           CP_PASSWORD: ${{ secrets.CP_PASSWORD }}
           THRESHOLD_HOURS: "48"
-        run: python fleet_map_updater.py
+        run: python PM_unreach.py
 
       - name: Commit updated CSVs/JSON back to repo
         run: |
