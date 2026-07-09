@@ -1,0 +1,9 @@
+[2026-07-09 13:31:29] Working dir: /home/runner/work/PMalert/PMalert
+[2026-07-09 13:31:29] Fetching stations via getStations…
+[2026-07-09 13:31:46] Fetching status for 1754 stations (concurrency=20)…
+[2026-07-09 13:32:20] Fetching load for 1754 stations (concurrency=20)…
+[2026-07-09 13:32:54] Wrote /home/runner/work/PMalert/PMalert/alerts_unreachable_gt48.json with 155 alert(s)
+[2026-07-09 13:32:54] Wrote /home/runner/work/PMalert/PMalert/unreachable_event_counts.csv with 1,754 rows
+[2026-07-09 13:32:54] Wrote /home/runner/work/PMalert/PMalert/unreachable_new.csv with 193 rows
+[2026-07-09 13:32:54] Wrote /home/runner/work/PMalert/PMalert/pm_new.csv with 0 rows
+[2026-07-09 13:32:54] Wrote /home/runner/work/PMalert/PMalert/status_latest_slim.csv with 1,609 rows
