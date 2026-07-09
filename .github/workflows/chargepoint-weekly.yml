@@ -1,0 +1,44 @@
+name: ChargePoint Weekly Refresh
+
+on:
+  schedule:
+    # Runs every Monday at 11:00 UTC (~7:00 AM ET / 6:00 AM CT / 4:00 AM PT).
+    # Adjust the hour to your preference — cron is always in UTC.
+    - cron: "0 11 * * 1"
+  workflow_dispatch: {}   # lets you click "Run workflow" manually to test
+
+permissions:
+  contents: write   # needed so the workflow can commit the updated CSVs back to the repo
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run fleet map updater
+        env:
+          CP_USERNAME: ${{ secrets.CP_USERNAME }}
+          CP_PASSWORD: ${{ secrets.CP_PASSWORD }}
+          THRESHOLD_HOURS: "48"
+        run: python fleet_map_updater.py
+
+      - name: Commit updated CSVs/JSON back to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add stations_per_station_slim.csv status_latest_slim.csv \
+                   alerts_unreachable_gt48.json unreachable_event_counts.csv \
+                   unreachable_new.csv pm_new.csv \
+                   .cp_unreach_state.json chargepoint_refresh.log
+          git diff --cached --quiet || git commit -m "Weekly ChargePoint refresh $(date -u +%Y-%m-%d)"
+          git push
