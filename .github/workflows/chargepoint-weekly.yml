@@ -1,10 +1,11 @@
-name: ChargePoint Weekly Refresh
+name: Unreachable Count Update - Daily Reset Weekly
 
 on:
   schedule:
-    # Runs every Monday at 11:00 UTC (~7:00 AM ET / 6:00 AM CT / 4:00 AM PT).
-    # Adjust the hour to your preference — cron is always in UTC.
-    - cron: "0 11 * * 1"
+    # Runs every day at 11:00 UTC (~7:00 AM ET / 6:00 AM CT / 4:00 AM PT).
+    # Daily runs accumulate this week's unreachable/power-module counts;
+    # the counters reset automatically the first time a new ISO week is detected.
+    - cron: "0 11 * * *"
   workflow_dispatch: {}   # lets you click "Run workflow" manually to test
 
 permissions:
@@ -25,20 +26,21 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run fleet map updater
+      - name: Run unreachable/PM count updater
         env:
           CP_USERNAME: ${{ secrets.CP_USERNAME }}
           CP_PASSWORD: ${{ secrets.CP_PASSWORD }}
-          THRESHOLD_HOURS: "48"
-        run: python PM_unreach.py
+          THRESHOLD_HOURS: "24"
+        run: python unreachable_count_update_daily_reset_weekly.py
 
       - name: Commit updated CSVs/JSON back to repo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add stations_per_station_slim.csv status_latest_slim.csv \
-                   alerts_unreachable_gt48.json unreachable_event_counts.csv \
+                   alerts_unreachable_gt24.json unreachable_event_counts.csv \
                    unreachable_new.csv pm_new.csv \
-                   .cp_unreach_state.json chargepoint_refresh.log
-          git diff --cached --quiet || git commit -m "Weekly ChargePoint refresh $(date -u +%Y-%m-%d)"
+                   unreachable_weekly_history.csv pm_weekly_history.csv \
+                   .cp_unreach_state.json .cp_weekly_state.json chargepoint_refresh.log
+          git diff --cached --quiet || git commit -m "Daily unreachable/PM count update $(date -u +%Y-%m-%d)"
           git push
