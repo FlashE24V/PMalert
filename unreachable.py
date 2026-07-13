@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """
-Fleet-Map updater + >48h unreachable alerts (GitHub Actions safe)
+unreachable_count_update_daily_reset_weekly.py
+
+Fleet-Map updater + >24h unreachable alerts, PLUS daily-accumulating /
+weekly-resetting counts for Level 2 unreachable chargers and Level 3 power
+module faults (GitHub Actions safe, run daily via cron).
 
 Priority rules (with CPF handling):
 - Level 3 (DC fast): Charging > Available > Occupied   (single-port behavior)
@@ -14,16 +18,25 @@ Inputs (GitHub Actions Secrets):
 Outputs (repo root / $GITHUB_WORKSPACE):
 - stations_per_station_slim.csv              (NO stationID in output)
 - status_latest_slim.csv                     (NO stationID in output; includes hours_unreachable)
-- alerts_unreachable_gt48.json
+- alerts_unreachable_gt24.json
 - unreachable_event_counts.csv               (NO stationID in output; includes event counts)
-- unreachable_new.csv                        (NEW: Level 2 stations currently UNREACHABLE, with name/date)
-- pm_new.csv                                 (NEW: Level 3 stations with a Power Module fault, with name/date)
-- .cp_unreach_state.json (persistent state)
+- unreachable_new.csv                        (Level 2 chargers unreachable at any point THIS WEEK so far —
+                                               running total, resets when a new ISO week starts)
+- pm_new.csv                                 (Level 3 chargers with a Power Module fault THIS WEEK so far —
+                                               running total, resets when a new ISO week starts)
+- unreachable_weekly_history.csv             (permanent log: one row per completed week, final count)
+- pm_weekly_history.csv                      (permanent log: one row per completed week, final count)
+- .cp_unreach_state.json (persistent per-station state)
+- .cp_weekly_state.json (persistent weekly-accumulator state)
 - chargepoint_refresh.log
 
 Unreachable definition (per ChargePoint API 5.1 getStationStatus.networkStatus):
 - Unreachable iff StationNetworkStatus == "Unreachable" (case-insensitive)
   (i.e., values like Reachable / Unreachable)
+
+Schedule this to run DAILY (not just weekly) — the weekly counters accumulate
+day over day and automatically reset the first time a new ISO week (Mon-Sun)
+is detected, archiving the prior week's final total to the history CSVs first.
 """
 
 import os, re, time, shutil, tempfile, json
@@ -53,8 +66,8 @@ LOG_FILE     = os.path.join(OUTPUT_DIR, "chargepoint_refresh.log")
 
 # State & alerts paths
 STATE_PATH        = os.path.join(OUTPUT_DIR, ".cp_unreach_state.json")   # persisted across runs
-ALERTS_PATH       = os.path.join(OUTPUT_DIR, "alerts_unreachable_gt48.json")
-ALERT_THRESHOLD_HOURS = int(os.getenv("THRESHOLD_HOURS", "48"))
+ALERTS_PATH       = os.path.join(OUTPUT_DIR, "alerts_unreachable_gt24.json")
+ALERT_THRESHOLD_HOURS = int(os.getenv("THRESHOLD_HOURS", "24"))
 
 # Output with unreachable event counts
 UNREACH_COUNTS_OUT = os.path.join(OUTPUT_DIR, "unreachable_event_counts.csv")
@@ -62,6 +75,11 @@ UNREACH_COUNTS_OUT = os.path.join(OUTPUT_DIR, "unreachable_event_counts.csv")
 # NEW: detail outputs requested — Level 2 unreachable list / Level 3 power module fault list
 UNREACHABLE_NEW_OUT = os.path.join(OUTPUT_DIR, "unreachable_new.csv")
 PM_NEW_OUT = os.path.join(OUTPUT_DIR, "pm_new.csv")
+
+# NEW: weekly accumulator state + permanent history logs (one row written per completed week)
+WEEKLY_STATE_PATH = os.path.join(OUTPUT_DIR, ".cp_weekly_state.json")
+WEEKLY_HISTORY_L2_OUT = os.path.join(OUTPUT_DIR, "unreachable_weekly_history.csv")
+WEEKLY_HISTORY_L3_OUT = os.path.join(OUTPUT_DIR, "pm_weekly_history.csv")
 
 # Substrings (case-insensitive) that identify a "power module" fault in faultReason.
 # Confirm the exact wording your account uses by checking a run's pm_new.csv /
@@ -396,33 +414,106 @@ def slim_output(merged: pd.DataFrame) -> pd.DataFrame:
     return out[FINAL_COLS]
 
 # --------------- NEW: detail-report writers ---------------
-def write_unreachable_new(merged_df: pd.DataFrame, net_series: pd.Series):
-    """Level 2 stations currently UNREACHABLE — one row per station, with name/date."""
+# --------------- NEW: weekly accumulator helpers ---------------
+def iso_week_id(dt: datetime) -> str:
+    y, w, _ = dt.isocalendar()
+    return f"{y}-W{w:02d}"
+
+def load_weekly_state():
+    try:
+        with open(WEEKLY_STATE_PATH, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {"week_id": None, "level2_ids": [], "level3_ids": []}
+
+def save_weekly_state(state):
+    tmp = WEEKLY_STATE_PATH + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(state, f, indent=2, sort_keys=True)
+    os.replace(tmp, WEEKLY_STATE_PATH)
+
+def append_history_row(csv_path, week_id, count):
+    file_exists = os.path.isfile(csv_path)
+    import csv as _csv
+    with open(csv_path, "a", newline="", encoding="utf-8") as f:
+        writer = _csv.writer(f)
+        if not file_exists:
+            writer.writerow(["week", "count"])
+        writer.writerow([week_id, count])
+
+def roll_weekly_state(now_utc: datetime):
+    """Returns the weekly state to use for today's run. If a new ISO week has
+    started since the last run, archives last week's final totals to the
+    permanent history CSVs, then resets the running lists to empty."""
+    wk_id = iso_week_id(now_utc)
+    weekly_state = load_weekly_state()
+
+    if weekly_state.get("week_id") is not None and weekly_state.get("week_id") != wk_id:
+        append_history_row(WEEKLY_HISTORY_L2_OUT, weekly_state["week_id"], len(weekly_state.get("level2_ids", [])))
+        append_history_row(WEEKLY_HISTORY_L3_OUT, weekly_state["week_id"], len(weekly_state.get("level3_ids", [])))
+        log(f"New week detected ({weekly_state['week_id']} -> {wk_id}); archived last week's totals and reset counters.")
+        weekly_state = {"week_id": wk_id, "level2_ids": [], "level3_ids": []}
+    elif weekly_state.get("week_id") is None:
+        weekly_state = {"week_id": wk_id, "level2_ids": [], "level3_ids": []}
+
+    return weekly_state
+
+# --------------- NEW: detail-report writers (weekly running totals) ---------------
+def write_unreachable_new(merged_df: pd.DataFrame, net_series: pd.Series, weekly_state: dict):
+    """Every Level 2 charger that has been UNREACHABLE at any point THIS WEEK so far
+    (running total, resets each new week), with the date it first went down and
+    whether it's still down right now."""
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    mask = (merged_df["Charger type"] == "Level 2") & net_series.eq("UNREACHABLE")
-    cols = ["stationName", "Address", "City", "State", "Charger type", "stationModel", "hours_unreachable"]
+
+    today_mask = (merged_df["Charger type"] == "Level 2") & net_series.eq("UNREACHABLE")
+    today_ids = set(merged_df.loc[today_mask, "stationID"].dropna().astype(str))
+    weekly_state["level2_ids"] = sorted(set(weekly_state.get("level2_ids", [])) | today_ids)
+
+    cols = [
+        "stationID", "stationName", "Address", "City", "State", "Charger type", "stationModel",
+        "date_became_unreachable", "hours_unreachable",
+    ]
     for c in cols:
         if c not in merged_df.columns:
             merged_df[c] = None
-    detail = merged_df.loc[mask, cols].copy()
-    detail.insert(0, "date", today)
-    atomic_write_csv(detail, UNREACHABLE_NEW_OUT)
-    log(f"Wrote {UNREACHABLE_NEW_OUT} with {len(detail):,} rows")
 
-def write_pm_new(merged_df: pd.DataFrame, fr_series_upper: pd.Series):
-    """Level 3 stations with a Power Module fault — one row per station, with name/date."""
+    week_ids = set(weekly_state["level2_ids"])
+    detail = merged_df.loc[merged_df["stationID"].astype(str).isin(week_ids), cols].copy()
+    detail = detail.drop_duplicates(subset=["stationID"], keep="last")
+    detail["currently_unreachable"] = detail["stationID"].astype(str).isin(today_ids)
+    detail.insert(0, "week", weekly_state["week_id"])
+    detail.insert(0, "date", today)
+    detail = detail.drop(columns=["stationID"])
+
+    atomic_write_csv(detail, UNREACHABLE_NEW_OUT)
+    log(f"Wrote {UNREACHABLE_NEW_OUT} — {len(detail):,} distinct Level 2 chargers unreachable so far this week ({weekly_state['week_id']})")
+
+def write_pm_new(merged_df: pd.DataFrame, fr_series_upper: pd.Series, weekly_state: dict):
+    """Every Level 3 charger that has shown a Power Module fault at any point THIS
+    WEEK so far (running total, resets each new week)."""
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
     keywords_upper = [kw.upper() for kw in POWER_MODULE_FAULT_KEYWORDS]
     kw_mask = fr_series_upper.apply(lambda x: any(kw in x for kw in keywords_upper))
-    mask = (merged_df["Charger type"] == "Level 3") & kw_mask
-    cols = ["stationName", "Address", "City", "State", "Charger type", "stationModel", "faultReason"]
+    today_mask = (merged_df["Charger type"] == "Level 3") & kw_mask
+    today_ids = set(merged_df.loc[today_mask, "stationID"].dropna().astype(str))
+    weekly_state["level3_ids"] = sorted(set(weekly_state.get("level3_ids", [])) | today_ids)
+
+    cols = ["stationID", "stationName", "Address", "City", "State", "Charger type", "stationModel", "faultReason"]
     for c in cols:
         if c not in merged_df.columns:
             merged_df[c] = None
-    detail = merged_df.loc[mask, cols].copy()
+
+    week_ids = set(weekly_state["level3_ids"])
+    detail = merged_df.loc[merged_df["stationID"].astype(str).isin(week_ids), cols].copy()
+    detail = detail.drop_duplicates(subset=["stationID"], keep="last")
+    detail["currently_faulted"] = detail["stationID"].astype(str).isin(today_ids)
+    detail.insert(0, "week", weekly_state["week_id"])
     detail.insert(0, "date", today)
+    detail = detail.drop(columns=["stationID"])
+
     atomic_write_csv(detail, PM_NEW_OUT)
-    log(f"Wrote {PM_NEW_OUT} with {len(detail):,} rows")
+    log(f"Wrote {PM_NEW_OUT} — {len(detail):,} distinct Level 3 power module faults so far this week ({weekly_state['week_id']})")
 
 # --------------- State + alert helpers ---------------
 def load_state(path=STATE_PATH):
@@ -617,9 +708,21 @@ def main():
     hours = (now_utc - since_dt).dt.total_seconds() / 3600.0
     merged.loc[unreachable_mask & since_dt.notna(), "hours_unreachable"] = hours.round(1)
 
+    # NEW: date each currently-unreachable station first went down, per persisted state
+    merged["date_became_unreachable"] = None
+    merged.loc[unreachable_mask & since_dt.notna(), "date_became_unreachable"] = (
+        since_dt[unreachable_mask & since_dt.notna()].dt.strftime("%Y-%m-%d")
+    )
+
+    # NEW: roll over to a new week's counters if a new ISO week has started
+    # (archives last week's final totals to the history CSVs first)
+    weekly_state = roll_weekly_state(now_utc)
+
     # NEW: write the two requested detail reports (Level 2 unreachable / Level 3 power module)
-    write_unreachable_new(merged, net)
-    write_pm_new(merged, fr)
+    # — these accumulate distinct chargers hit THIS WEEK, resetting each new week
+    write_unreachable_new(merged, net, weekly_state)
+    write_pm_new(merged, fr, weekly_state)
+    save_weekly_state(weekly_state)
 
     final_df = slim_output(merged)
     atomic_write_csv(final_df, STATUS_OUT)
