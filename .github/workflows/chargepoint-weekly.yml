@@ -2,10 +2,10 @@ name: Unreachable Count Update - Daily Reset Weekly
 
 on:
   schedule:
-    # Runs every day at 11:00 UTC (~7:00 AM ET / 6:00 AM CT / 4:00 AM PT).
-    # Daily runs accumulate this week's unreachable/power-module counts;
-    # the counters reset automatically the first time a new ISO week is detected.
-    - cron: "0 11 * * *"
+    # Runs every 6 hours (00:00, 06:00, 12:00, 18:00 UTC).
+    # More frequent runs = better chance of catching real intra-day
+    # unreachable/reachable flapping for accurate event counts.
+    - cron: "0 */6 * * *"
   workflow_dispatch: {}   # lets you click "Run workflow" manually to test
 
 permissions:
