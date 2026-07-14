@@ -1,1 +1,1 @@
-date,stationName,Address,City,State,Charger type,stationModel,faultReason
+date,week,stationName,Address,City,State,Charger type,stationModel,faultReason,currently_faulted
