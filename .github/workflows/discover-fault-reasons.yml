@@ -1,0 +1,25 @@
+name: Discover Fault Reasons (one-off)
+
+on:
+  workflow_dispatch: {}   # manual trigger only — no schedule needed
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Discover fault reasons
+        env:
+          CP_USERNAME: ${{ secrets.CP_USERNAME }}
+          CP_PASSWORD: ${{ secrets.CP_PASSWORD }}
+        run: python discover_fault_reasons.py
