@@ -37,10 +37,16 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add stations_per_station_slim.csv status_latest_slim.csv \
+          for f in stations_per_station_slim.csv status_latest_slim.csv \
                    alerts_unreachable_gt24.json unreachable_event_counts.csv \
                    unreachable_new.csv pm_new.csv \
                    unreachable_weekly_history.csv pm_weekly_history.csv \
-                   .cp_unreach_state.json .cp_weekly_state.json chargepoint_refresh.log
+                   .cp_unreach_state.json .cp_weekly_state.json chargepoint_refresh.log; do
+            if [ -f "$f" ]; then
+              git add "$f"
+            else
+              echo "Skipping $f (does not exist yet)"
+            fi
+          done
           git diff --cached --quiet || git commit -m "Daily unreachable/PM count update $(date -u +%Y-%m-%d)"
           git push
