@@ -1,3 +1,3 @@
 date,week,stationName,Address,City,State,Charger type,stationModel,faultReason,currently_faulted
-2026-07-26,2026-W30,NYC FLEET / DPRMBLOT8_1_L3,920 Father Capodanno Blvd,Midland Beach,New York,Level 3,CPE250C-500-CCS1-CHD,Power Module Not Ready,True
-2026-07-26,2026-W30,NYC FLEET / DPRMBLOT8_2_L3,920 Father Capodanno Blvd,Midland Beach,New York,Level 3,CPE250C-500-CCS1-CHD,Not All Power Modules Active Available,True
+2026-07-27,2026-W31,NYC FLEET / DPRMBLOT8_1_L3,920 Father Capodanno Blvd,Midland Beach,New York,Level 3,CPE250C-500-CCS1-CHD,Power Module Not Ready,True
+2026-07-27,2026-W31,NYC FLEET / DPRMBLOT8_2_L3,920 Father Capodanno Blvd,Midland Beach,New York,Level 3,CPE250C-500-CCS1-CHD,Not All Power Modules Active Available,True
