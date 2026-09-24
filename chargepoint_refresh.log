@@ -2567,3 +2567,12 @@
 [2026-09-24 10:51:37] Wrote /home/runner/work/PMalert/PMalert/unreachable_new.csv — 311 distinct Level 2 chargers unreachable so far this week (2026-W39)
 [2026-09-24 10:51:37] Wrote /home/runner/work/PMalert/PMalert/pm_new.csv — 0 distinct Level 3 power module faults so far this week (2026-W39)
 [2026-09-24 10:51:37] Wrote /home/runner/work/PMalert/PMalert/status_latest_slim.csv with 1,654 rows
+[2026-09-24 16:13:22] Working dir: /home/runner/work/PMalert/PMalert
+[2026-09-24 16:13:22] Fetching stations via getStations…
+[2026-09-24 16:13:34] Fetching status for 1812 stations (concurrency=20)…
+[2026-09-24 16:14:03] Fetching load for 1812 stations (concurrency=20)…
+[2026-09-24 16:14:28] Wrote /home/runner/work/PMalert/PMalert/alerts_unreachable_gt24.json with 185 alert(s)
+[2026-09-24 16:14:28] Wrote /home/runner/work/PMalert/PMalert/unreachable_event_counts.csv with 1,814 rows
+[2026-09-24 16:14:28] Wrote /home/runner/work/PMalert/PMalert/unreachable_new.csv — 314 distinct Level 2 chargers unreachable so far this week (2026-W39)
+[2026-09-24 16:14:28] Wrote /home/runner/work/PMalert/PMalert/pm_new.csv — 0 distinct Level 3 power module faults so far this week (2026-W39)
+[2026-09-24 16:14:28] Wrote /home/runner/work/PMalert/PMalert/status_latest_slim.csv with 1,664 rows
