@@ -1,15 +1,5 @@
 [
   {
-    "stationID": "1:10084971",
-    "stationName": "NYC FLEET / DPR_OVERLOOK_1",
-    "Address": "80-30 Park Ln",
-    "City": "Kew Gardens",
-    "State": "New York",
-    "charger_type": "Level 2",
-    "since_iso": "2026-10-14T18:29:55+00:00",
-    "hours_down": 26.3
-  },
-  {
     "stationID": "1:10223291",
     "stationName": "NYC FLEET / DHS_BKLMNR_1_L3",
     "Address": "300 Skillman Ave",
@@ -17,7 +7,7 @@
     "State": "New York",
     "charger_type": "Level 3",
     "since_iso": "2026-10-09T15:03:07+00:00",
-    "hours_down": 149.7
+    "hours_down": 155.5
   },
   {
     "stationID": "1:118359",
@@ -27,7 +17,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-05-27T12:48:50+00:00",
-    "hours_down": 3392.0
+    "hours_down": 3397.7
   },
   {
     "stationID": "1:11911111",
@@ -37,7 +27,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-10-14T20:01:24+00:00",
-    "hours_down": 24.8
+    "hours_down": 30.5
   },
   {
     "stationID": "1:11925611",
@@ -47,7 +37,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2024-12-13T11:19:44+00:00",
-    "hours_down": 16113.5
+    "hours_down": 16119.2
   },
   {
     "stationID": "1:121765",
@@ -57,7 +47,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-08-18T04:31:32+00:00",
-    "hours_down": 1408.3
+    "hours_down": 1414.0
   },
   {
     "stationID": "1:122895",
@@ -67,7 +57,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2022-02-27T08:00:04+00:00",
-    "hours_down": 40596.8
+    "hours_down": 40602.5
   },
   {
     "stationID": "1:122919",
@@ -77,7 +67,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2018-12-04T17:15:20+00:00",
-    "hours_down": 68931.5
+    "hours_down": 68937.3
   },
   {
     "stationID": "1:122971",
@@ -87,7 +77,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2022-03-02T03:03:21+00:00",
-    "hours_down": 40529.7
+    "hours_down": 40535.5
   },
   {
     "stationID": "1:122979",
@@ -97,7 +87,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2019-03-07T18:00:07+00:00",
-    "hours_down": 66698.8
+    "hours_down": 66704.5
   },
   {
     "stationID": "1:122989",
@@ -107,7 +97,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2022-03-02T05:40:23+00:00",
-    "hours_down": 40527.1
+    "hours_down": 40532.8
   },
   {
     "stationID": "1:122999",
@@ -117,7 +107,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2022-03-02T03:35:39+00:00",
-    "hours_down": 40529.2
+    "hours_down": 40534.9
   },
   {
     "stationID": "1:12639681",
@@ -127,7 +117,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-10-14T01:30:59+00:00",
-    "hours_down": 43.3
+    "hours_down": 49.0
   },
   {
     "stationID": "1:12657191",
@@ -137,7 +127,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-10-17T08:56:38+00:00",
-    "hours_down": 8723.8
+    "hours_down": 8729.6
   },
   {
     "stationID": "1:12796101",
@@ -147,7 +137,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-10-17T12:36:37+00:00",
-    "hours_down": 8720.2
+    "hours_down": 8725.9
   },
   {
     "stationID": "1:12796151",
@@ -157,7 +147,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-10-17T12:36:37+00:00",
-    "hours_down": 8720.2
+    "hours_down": 8725.9
   },
   {
     "stationID": "1:12796171",
@@ -167,7 +157,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-10-17T12:36:37+00:00",
-    "hours_down": 8720.2
+    "hours_down": 8725.9
   },
   {
     "stationID": "1:13122791",
@@ -177,7 +167,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-03-21T01:49:05+00:00",
-    "hours_down": 5011.0
+    "hours_down": 5016.7
   },
   {
     "stationID": "1:13123381",
@@ -187,7 +177,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-06-20T00:06:47+00:00",
-    "hours_down": 11588.7
+    "hours_down": 11594.4
   },
   {
     "stationID": "1:13150111",
@@ -197,7 +187,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-02-24T05:37:14+00:00",
-    "hours_down": 5607.2
+    "hours_down": 5612.9
   },
   {
     "stationID": "1:13188601",
@@ -207,7 +197,7 @@
     "State": "New York",
     "charger_type": "Level 3",
     "since_iso": "2026-10-06T22:30:05+00:00",
-    "hours_down": 214.3
+    "hours_down": 220.0
   },
   {
     "stationID": "1:13219921",
@@ -217,7 +207,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-08-22T20:47:30+00:00",
-    "hours_down": 1296.0
+    "hours_down": 1301.7
   },
   {
     "stationID": "1:13221341",
@@ -227,7 +217,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-09-07T14:34:25+00:00",
-    "hours_down": 9678.2
+    "hours_down": 9683.9
   },
   {
     "stationID": "1:13222741",
@@ -237,7 +227,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-08-12T06:00:53+00:00",
-    "hours_down": 10310.8
+    "hours_down": 10316.5
   },
   {
     "stationID": "1:13223541",
@@ -247,7 +237,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-09-03T19:34:16+00:00",
-    "hours_down": 1009.2
+    "hours_down": 1014.9
   },
   {
     "stationID": "1:13223561",
@@ -257,7 +247,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-09-03T19:33:57+00:00",
-    "hours_down": 1009.2
+    "hours_down": 1014.9
   },
   {
     "stationID": "1:13223571",
@@ -267,7 +257,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-09-03T19:33:47+00:00",
-    "hours_down": 1009.2
+    "hours_down": 1014.9
   },
   {
     "stationID": "1:13223581",
@@ -277,7 +267,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-09-03T19:34:16+00:00",
-    "hours_down": 1009.2
+    "hours_down": 1014.9
   },
   {
     "stationID": "1:13223611",
@@ -287,7 +277,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-09-03T19:34:16+00:00",
-    "hours_down": 1009.2
+    "hours_down": 1014.9
   },
   {
     "stationID": "1:13223641",
@@ -297,7 +287,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-09-03T19:34:16+00:00",
-    "hours_down": 1009.2
+    "hours_down": 1014.9
   },
   {
     "stationID": "1:13227341",
@@ -307,7 +297,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-08-21T06:46:40+00:00",
-    "hours_down": 1334.0
+    "hours_down": 1339.7
   },
   {
     "stationID": "1:13227961",
@@ -317,7 +307,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-12-16T03:58:28+00:00",
-    "hours_down": 7288.8
+    "hours_down": 7294.5
   },
   {
     "stationID": "1:13229601",
@@ -327,7 +317,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-12-26T01:12:33+00:00",
-    "hours_down": 7051.6
+    "hours_down": 7057.3
   },
   {
     "stationID": "1:13233241",
@@ -337,7 +327,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-12-07T02:09:24+00:00",
-    "hours_down": 7506.6
+    "hours_down": 7512.4
   },
   {
     "stationID": "1:13241121",
@@ -347,7 +337,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-09-05T14:38:42+00:00",
-    "hours_down": 9726.1
+    "hours_down": 9731.9
   },
   {
     "stationID": "1:13242111",
@@ -357,7 +347,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-01-25T21:08:21+00:00",
-    "hours_down": 6311.7
+    "hours_down": 6317.4
   },
   {
     "stationID": "1:13242711",
@@ -367,7 +357,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-08-12T22:14:49+00:00",
-    "hours_down": 10294.5
+    "hours_down": 10300.3
   },
   {
     "stationID": "1:13258301",
@@ -377,7 +367,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-07-25T14:40:42+00:00",
-    "hours_down": 10734.1
+    "hours_down": 10739.8
   },
   {
     "stationID": "1:13259221",
@@ -387,7 +377,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-01-27T05:51:23+00:00",
-    "hours_down": 6278.9
+    "hours_down": 6284.7
   },
   {
     "stationID": "1:13260351",
@@ -397,7 +387,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-12-10T18:32:50+00:00",
-    "hours_down": 7418.2
+    "hours_down": 7424.0
   },
   {
     "stationID": "1:13343931",
@@ -407,7 +397,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-09-09T13:29:05+00:00",
-    "hours_down": 871.3
+    "hours_down": 877.0
   },
   {
     "stationID": "1:13398561",
@@ -417,7 +407,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-08-19T15:16:06+00:00",
-    "hours_down": 1373.5
+    "hours_down": 1379.2
   },
   {
     "stationID": "1:13461631",
@@ -427,7 +417,7 @@
     "State": "New York",
     "charger_type": "Level 3",
     "since_iso": "2026-08-18T07:47:00+00:00",
-    "hours_down": 1405.0
+    "hours_down": 1410.7
   },
   {
     "stationID": "1:13584601",
@@ -437,7 +427,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-12-16T13:19:34+00:00",
-    "hours_down": 7279.5
+    "hours_down": 7285.2
   },
   {
     "stationID": "1:13614461",
@@ -447,7 +437,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-08-08T03:38:39+00:00",
-    "hours_down": 1649.1
+    "hours_down": 1654.9
   },
   {
     "stationID": "1:13731151",
@@ -457,7 +447,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-12-17T02:12:01+00:00",
-    "hours_down": 7266.6
+    "hours_down": 7272.3
   },
   {
     "stationID": "1:13733391",
@@ -467,7 +457,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-12-11T21:38:10+00:00",
-    "hours_down": 7391.2
+    "hours_down": 7396.9
   },
   {
     "stationID": "1:13745651",
@@ -477,7 +467,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-01-27T04:46:16+00:00",
-    "hours_down": 6280.0
+    "hours_down": 6285.7
   },
   {
     "stationID": "1:13751061",
@@ -487,7 +477,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-09-07T03:48:17+00:00",
-    "hours_down": 9689.0
+    "hours_down": 9694.7
   },
   {
     "stationID": "1:13752201",
@@ -497,7 +487,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-09-18T13:51:30+00:00",
-    "hours_down": 9414.9
+    "hours_down": 9420.7
   },
   {
     "stationID": "1:13753101",
@@ -507,7 +497,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-09-16T15:27:22+00:00",
-    "hours_down": 9461.3
+    "hours_down": 9467.1
   },
   {
     "stationID": "1:13754501",
@@ -517,7 +507,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-06-11T11:27:15+00:00",
-    "hours_down": 11793.3
+    "hours_down": 11799.1
   },
   {
     "stationID": "1:13758031",
@@ -527,7 +517,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-01-21T10:30:20+00:00",
-    "hours_down": 15178.3
+    "hours_down": 15184.0
   },
   {
     "stationID": "1:13758751",
@@ -537,7 +527,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-03-09T22:03:19+00:00",
-    "hours_down": 5278.7
+    "hours_down": 5284.5
   },
   {
     "stationID": "1:13761461",
@@ -547,7 +537,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-12-17T02:34:40+00:00",
-    "hours_down": 7266.2
+    "hours_down": 7271.9
   },
   {
     "stationID": "1:13762031",
@@ -557,7 +547,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-10-16T22:04:15+00:00",
-    "hours_down": 8734.7
+    "hours_down": 8740.4
   },
   {
     "stationID": "1:13765601",
@@ -567,7 +557,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-09-15T17:05:12+00:00",
-    "hours_down": 9483.7
+    "hours_down": 9489.4
   },
   {
     "stationID": "1:13766381",
@@ -577,7 +567,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-01-16T21:16:41+00:00",
-    "hours_down": 6527.5
+    "hours_down": 6533.2
   },
   {
     "stationID": "1:13767351",
@@ -587,7 +577,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-10-14T16:17:53+00:00",
-    "hours_down": 28.5
+    "hours_down": 34.2
   },
   {
     "stationID": "1:13769471",
@@ -597,7 +587,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-11-27T07:05:01+00:00",
-    "hours_down": 7741.7
+    "hours_down": 7747.4
   },
   {
     "stationID": "1:13770661",
@@ -607,7 +597,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-01-26T11:19:18+00:00",
-    "hours_down": 6297.5
+    "hours_down": 6303.2
   },
   {
     "stationID": "1:13883451",
@@ -617,7 +607,7 @@
     "State": "New York",
     "charger_type": "Level 3",
     "since_iso": "2026-10-06T11:05:05+00:00",
-    "hours_down": 225.7
+    "hours_down": 231.4
   },
   {
     "stationID": "1:14029811",
@@ -627,7 +617,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-03-17T19:36:59+00:00",
-    "hours_down": 5089.2
+    "hours_down": 5094.9
   },
   {
     "stationID": "1:14034361",
@@ -637,7 +627,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-09-13T03:52:57+00:00",
-    "hours_down": 9544.9
+    "hours_down": 9550.6
   },
   {
     "stationID": "1:14035981",
@@ -647,7 +637,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-12-04T21:42:18+00:00",
-    "hours_down": 7559.1
+    "hours_down": 7564.8
   },
   {
     "stationID": "1:14036771",
@@ -657,7 +647,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-12-04T20:58:34+00:00",
-    "hours_down": 7559.8
+    "hours_down": 7565.5
   },
   {
     "stationID": "1:14038991",
@@ -667,7 +657,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-12-12T22:32:10+00:00",
-    "hours_down": 7366.3
+    "hours_down": 7372.0
   },
   {
     "stationID": "1:14044641",
@@ -677,7 +667,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2024-12-12T01:36:20+00:00",
-    "hours_down": 16147.2
+    "hours_down": 16152.9
   },
   {
     "stationID": "1:14154071",
@@ -687,7 +677,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-12-15T21:17:06+00:00",
-    "hours_down": 7295.5
+    "hours_down": 7301.2
   },
   {
     "stationID": "1:14156241",
@@ -697,7 +687,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-01-29T18:39:05+00:00",
-    "hours_down": 6218.1
+    "hours_down": 6223.9
   },
   {
     "stationID": "1:14158721",
@@ -707,7 +697,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-12-22T16:44:06+00:00",
-    "hours_down": 7132.1
+    "hours_down": 7137.8
   },
   {
     "stationID": "1:14159271",
@@ -717,7 +707,7 @@
     "State": "New York",
     "charger_type": "Level 3",
     "since_iso": "2025-06-23T14:03:37+00:00",
-    "hours_down": 11502.7
+    "hours_down": 11508.5
   },
   {
     "stationID": "1:14159301",
@@ -727,7 +717,7 @@
     "State": "New York",
     "charger_type": "Level 3",
     "since_iso": "2026-08-19T07:49:11+00:00",
-    "hours_down": 1381.0
+    "hours_down": 1386.7
   },
   {
     "stationID": "1:14159321",
@@ -737,7 +727,7 @@
     "State": "New York",
     "charger_type": "Level 3",
     "since_iso": "2025-10-30T18:21:22+00:00",
-    "hours_down": 8402.4
+    "hours_down": 8408.2
   },
   {
     "stationID": "1:14159541",
@@ -747,7 +737,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-12-05T04:51:38+00:00",
-    "hours_down": 7551.9
+    "hours_down": 7557.7
   },
   {
     "stationID": "1:14160891",
@@ -757,7 +747,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-12-05T20:24:26+00:00",
-    "hours_down": 7536.4
+    "hours_down": 7542.1
   },
   {
     "stationID": "1:14167031",
@@ -767,7 +757,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-01-29T18:44:53+00:00",
-    "hours_down": 6218.0
+    "hours_down": 6223.8
   },
   {
     "stationID": "1:14167771",
@@ -777,7 +767,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-12-11T18:15:20+00:00",
-    "hours_down": 7394.5
+    "hours_down": 7400.3
   },
   {
     "stationID": "1:14169401",
@@ -787,7 +777,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-10-30T18:04:46+00:00",
-    "hours_down": 8402.7
+    "hours_down": 8408.4
   },
   {
     "stationID": "1:14174211",
@@ -797,7 +787,17 @@
     "State": "New York",
     "charger_type": "Level 3",
     "since_iso": "2026-10-05T18:45:09+00:00",
-    "hours_down": 242.0
+    "hours_down": 247.8
+  },
+  {
+    "stationID": "1:14197201",
+    "stationName": "NYC FLEET / DEPQUEENSREP-S1",
+    "Address": "106-36 180th St",
+    "City": "Queens",
+    "State": "New York",
+    "charger_type": "Level 2",
+    "since_iso": "2026-10-15T01:15:11+00:00",
+    "hours_down": 25.3
   },
   {
     "stationID": "1:15583741",
@@ -807,7 +807,7 @@
     "State": "New York",
     "charger_type": "Level 3",
     "since_iso": "2024-10-17T14:03:06+00:00",
-    "hours_down": 17478.7
+    "hours_down": 17484.5
   },
   {
     "stationID": "1:15609181",
@@ -817,7 +817,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-10-14T07:17:34+00:00",
-    "hours_down": 37.5
+    "hours_down": 43.2
   },
   {
     "stationID": "1:15854641",
@@ -827,7 +827,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-09-29T14:58:51+00:00",
-    "hours_down": 9149.8
+    "hours_down": 9155.5
   },
   {
     "stationID": "1:15885601",
@@ -837,7 +837,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-12-07T03:49:06+00:00",
-    "hours_down": 7505.0
+    "hours_down": 7510.7
   },
   {
     "stationID": "1:16064861",
@@ -847,7 +847,7 @@
     "State": "New York",
     "charger_type": "Level 3",
     "since_iso": "2026-07-03T09:52:59+00:00",
-    "hours_down": 2506.9
+    "hours_down": 2512.6
   },
   {
     "stationID": "1:16064871",
@@ -857,7 +857,7 @@
     "State": "New York",
     "charger_type": "Level 3",
     "since_iso": "2026-07-03T09:54:29+00:00",
-    "hours_down": 2506.9
+    "hours_down": 2512.6
   },
   {
     "stationID": "1:160689",
@@ -867,7 +867,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2022-03-02T05:11:11+00:00",
-    "hours_down": 40527.6
+    "hours_down": 40533.3
   },
   {
     "stationID": "1:160931",
@@ -877,7 +877,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2022-03-02T05:26:18+00:00",
-    "hours_down": 40527.4
+    "hours_down": 40533.1
   },
   {
     "stationID": "1:161021",
@@ -887,7 +887,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2022-03-02T05:19:10+00:00",
-    "hours_down": 40527.5
+    "hours_down": 40533.2
   },
   {
     "stationID": "1:16461391",
@@ -897,7 +897,7 @@
     "State": "New York",
     "charger_type": "Level 3",
     "since_iso": "2026-10-07T19:21:00+00:00",
-    "hours_down": 193.4
+    "hours_down": 199.2
   },
   {
     "stationID": "1:16461401",
@@ -907,7 +907,7 @@
     "State": "New York",
     "charger_type": "Level 3",
     "since_iso": "2026-10-07T19:12:53+00:00",
-    "hours_down": 193.6
+    "hours_down": 199.3
   },
   {
     "stationID": "1:16991351",
@@ -917,7 +917,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-07-07T16:46:55+00:00",
-    "hours_down": 2404.0
+    "hours_down": 2409.7
   },
   {
     "stationID": "1:17352041",
@@ -927,7 +927,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-07-23T10:04:13+00:00",
-    "hours_down": 2026.7
+    "hours_down": 2032.4
   },
   {
     "stationID": "1:1768131",
@@ -937,7 +937,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-10-09T21:35:08+00:00",
-    "hours_down": 143.2
+    "hours_down": 148.9
   },
   {
     "stationID": "1:1779021",
@@ -947,7 +947,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-07-05T13:17:37+00:00",
-    "hours_down": 2455.5
+    "hours_down": 2461.2
   },
   {
     "stationID": "1:178711",
@@ -957,7 +957,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2023-10-10T16:30:01+00:00",
-    "hours_down": 26428.3
+    "hours_down": 26434.0
   },
   {
     "stationID": "1:1787751",
@@ -967,17 +967,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-10-08T22:35:23+00:00",
-    "hours_down": 166.2
-  },
-  {
-    "stationID": "1:18110791",
-    "stationName": "NYC FLEET / DSNY_BK03-5",
-    "Address": "455 Park Avenue",
-    "City": "Brooklyn",
-    "State": "New York",
-    "charger_type": "Level 2",
-    "since_iso": "2026-10-14T06:03:14+00:00",
-    "hours_down": 38.7
+    "hours_down": 171.9
   },
   {
     "stationID": "1:183835",
@@ -987,7 +977,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-07-05T08:39:15+00:00",
-    "hours_down": 2460.1
+    "hours_down": 2465.9
   },
   {
     "stationID": "1:183873",
@@ -997,7 +987,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-06-05T18:13:41+00:00",
-    "hours_down": 3170.6
+    "hours_down": 3176.3
   },
   {
     "stationID": "1:18445701",
@@ -1007,7 +997,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-08-13T18:52:43.909855+00:00",
-    "hours_down": 1513.9
+    "hours_down": 1519.6
   },
   {
     "stationID": "1:1852151",
@@ -1017,7 +1007,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2024-03-22T16:44:54+00:00",
-    "hours_down": 22492.0
+    "hours_down": 22497.8
   },
   {
     "stationID": "1:1857511",
@@ -1027,7 +1017,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-06-23T11:40:33+00:00",
-    "hours_down": 2745.1
+    "hours_down": 2750.8
   },
   {
     "stationID": "1:186671",
@@ -1037,7 +1027,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-04-04T11:11:00+00:00",
-    "hours_down": 4665.6
+    "hours_down": 4671.3
   },
   {
     "stationID": "1:186699",
@@ -1047,7 +1037,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-04-04T11:13:53+00:00",
-    "hours_down": 4665.6
+    "hours_down": 4671.3
   },
   {
     "stationID": "1:186707",
@@ -1057,7 +1047,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-08-05T18:34:40+00:00",
-    "hours_down": 1706.2
+    "hours_down": 1711.9
   },
   {
     "stationID": "1:186727",
@@ -1067,7 +1057,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-04-04T11:11:00+00:00",
-    "hours_down": 4665.6
+    "hours_down": 4671.3
   },
   {
     "stationID": "1:186837",
@@ -1077,7 +1067,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-07-23T10:04:04+00:00",
-    "hours_down": 2026.7
+    "hours_down": 2032.4
   },
   {
     "stationID": "1:186861",
@@ -1087,7 +1077,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-10-14T12:46:43+00:00",
-    "hours_down": 32.0
+    "hours_down": 37.7
   },
   {
     "stationID": "1:186973",
@@ -1097,7 +1087,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-04-04T11:11:00+00:00",
-    "hours_down": 4665.6
+    "hours_down": 4671.3
   },
   {
     "stationID": "1:187021",
@@ -1107,7 +1097,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-07-02T07:21:34+00:00",
-    "hours_down": 2533.4
+    "hours_down": 2539.2
   },
   {
     "stationID": "1:1873331",
@@ -1117,7 +1107,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-06-24T18:12:33+00:00",
-    "hours_down": 2714.6
+    "hours_down": 2720.3
   },
   {
     "stationID": "1:1882621",
@@ -1127,7 +1117,17 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-10-09T18:58:40+00:00",
-    "hours_down": 145.8
+    "hours_down": 151.5
+  },
+  {
+    "stationID": "1:1882631",
+    "stationName": "NYC FLEET / DPRARSENAL#6",
+    "Address": "East Dr",
+    "City": "New York",
+    "State": "New York",
+    "charger_type": "Level 2",
+    "since_iso": "2026-10-14T20:50:01+00:00",
+    "hours_down": 29.7
   },
   {
     "stationID": "1:1882651",
@@ -1137,7 +1137,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-10-14T16:30:01+00:00",
-    "hours_down": 28.3
+    "hours_down": 34.0
   },
   {
     "stationID": "1:1882661",
@@ -1147,7 +1147,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-10-13T17:40:00+00:00",
-    "hours_down": 51.1
+    "hours_down": 56.8
   },
   {
     "stationID": "1:1882671",
@@ -1157,7 +1157,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-10-13T04:50:03+00:00",
-    "hours_down": 64.0
+    "hours_down": 69.7
   },
   {
     "stationID": "1:1885331",
@@ -1167,7 +1167,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-09-23T12:56:19+00:00",
-    "hours_down": 535.9
+    "hours_down": 541.6
   },
   {
     "stationID": "1:1892561",
@@ -1177,7 +1177,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-09-29T02:24:45+00:00",
-    "hours_down": 402.4
+    "hours_down": 408.1
   },
   {
     "stationID": "1:191439",
@@ -1187,7 +1187,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-10-12T10:41:04+00:00",
-    "hours_down": 82.1
+    "hours_down": 87.8
   },
   {
     "stationID": "1:191677",
@@ -1197,7 +1197,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-10-14T19:13:10+00:00",
-    "hours_down": 25.6
+    "hours_down": 31.3
   },
   {
     "stationID": "1:193731",
@@ -1207,7 +1207,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-09-03T09:43:02+00:00",
-    "hours_down": 1019.1
+    "hours_down": 1024.8
   },
   {
     "stationID": "1:193747",
@@ -1217,7 +1217,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-09-13T22:41:39+00:00",
-    "hours_down": 766.1
+    "hours_down": 771.8
   },
   {
     "stationID": "1:193759",
@@ -1227,7 +1227,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-07-02T10:11:34+00:00",
-    "hours_down": 2530.6
+    "hours_down": 2536.3
   },
   {
     "stationID": "1:19586151",
@@ -1237,7 +1237,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-07-09T08:48:59+00:00",
-    "hours_down": 2364.0
+    "hours_down": 2369.7
   },
   {
     "stationID": "1:19590191",
@@ -1247,7 +1247,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-07-09T04:29:03+00:00",
-    "hours_down": 2368.3
+    "hours_down": 2374.0
   },
   {
     "stationID": "1:19590211",
@@ -1257,7 +1257,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-07-09T08:11:00+00:00",
-    "hours_down": 2364.6
+    "hours_down": 2370.3
   },
   {
     "stationID": "1:19590221",
@@ -1267,7 +1267,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-07-06T07:53:18+00:00",
-    "hours_down": 2436.9
+    "hours_down": 2442.6
   },
   {
     "stationID": "1:19590411",
@@ -1277,7 +1277,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-10-14T06:47:31+00:00",
-    "hours_down": 38.0
+    "hours_down": 43.7
   },
   {
     "stationID": "1:19957061",
@@ -1287,7 +1287,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-07-09T13:32:54.551543+00:00",
-    "hours_down": 2359.2
+    "hours_down": 2365.0
   },
   {
     "stationID": "1:20036931",
@@ -1297,7 +1297,7 @@
     "State": "New York",
     "charger_type": "Level 3",
     "since_iso": "2026-08-10T18:45:39.971758+00:00",
-    "hours_down": 1586.0
+    "hours_down": 1591.8
   },
   {
     "stationID": "1:20036951",
@@ -1307,7 +1307,7 @@
     "State": "New York",
     "charger_type": "Level 3",
     "since_iso": "2026-08-10T18:45:39.971758+00:00",
-    "hours_down": 1586.0
+    "hours_down": 1591.8
   },
   {
     "stationID": "1:20036991",
@@ -1317,7 +1317,7 @@
     "State": "New York",
     "charger_type": "Level 3",
     "since_iso": "2026-08-10T18:45:39.971758+00:00",
-    "hours_down": 1586.0
+    "hours_down": 1591.8
   },
   {
     "stationID": "1:20037001",
@@ -1327,7 +1327,7 @@
     "State": "New York",
     "charger_type": "Level 3",
     "since_iso": "2026-08-10T18:45:39.971758+00:00",
-    "hours_down": 1586.0
+    "hours_down": 1591.8
   },
   {
     "stationID": "1:20037021",
@@ -1337,7 +1337,7 @@
     "State": "New York",
     "charger_type": "Level 3",
     "since_iso": "2026-08-10T18:45:39.971758+00:00",
-    "hours_down": 1586.0
+    "hours_down": 1591.8
   },
   {
     "stationID": "1:20037051",
@@ -1347,7 +1347,7 @@
     "State": "New York",
     "charger_type": "Level 3",
     "since_iso": "2026-08-10T18:45:39.971758+00:00",
-    "hours_down": 1586.0
+    "hours_down": 1591.8
   },
   {
     "stationID": "1:20037061",
@@ -1357,7 +1357,7 @@
     "State": "New York",
     "charger_type": "Level 3",
     "since_iso": "2026-08-10T18:45:39.971758+00:00",
-    "hours_down": 1586.0
+    "hours_down": 1591.8
   },
   {
     "stationID": "1:2009811",
@@ -1367,7 +1367,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-08-27T14:35:27+00:00",
-    "hours_down": 1182.2
+    "hours_down": 1187.9
   },
   {
     "stationID": "1:2090131",
@@ -1377,7 +1377,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-03-20T18:30:23+00:00",
-    "hours_down": 5018.3
+    "hours_down": 5024.0
   },
   {
     "stationID": "1:210341",
@@ -1387,7 +1387,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2019-03-19T12:59:30+00:00",
-    "hours_down": 66415.8
+    "hours_down": 66421.5
   },
   {
     "stationID": "1:210389",
@@ -1397,7 +1397,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2022-03-02T05:21:31+00:00",
-    "hours_down": 40527.4
+    "hours_down": 40533.2
   },
   {
     "stationID": "1:210589",
@@ -1407,7 +1407,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2022-03-02T05:45:15+00:00",
-    "hours_down": 40527.0
+    "hours_down": 40532.8
   },
   {
     "stationID": "1:210599",
@@ -1417,7 +1417,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2022-03-02T05:46:19+00:00",
-    "hours_down": 40527.0
+    "hours_down": 40532.7
   },
   {
     "stationID": "1:211597",
@@ -1427,7 +1427,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-10-14T16:36:40+00:00",
-    "hours_down": 28.2
+    "hours_down": 33.9
   },
   {
     "stationID": "1:217825",
@@ -1437,7 +1437,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2023-09-19T13:43:30+00:00",
-    "hours_down": 26935.1
+    "hours_down": 26940.8
   },
   {
     "stationID": "1:217857",
@@ -1447,7 +1447,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2023-09-19T13:33:52+00:00",
-    "hours_down": 26935.2
+    "hours_down": 26940.9
   },
   {
     "stationID": "1:287831",
@@ -1457,7 +1457,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-08-28T22:21:13+00:00",
-    "hours_down": 1150.4
+    "hours_down": 1156.2
   },
   {
     "stationID": "1:287931",
@@ -1467,7 +1467,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-10-14T18:46:06+00:00",
-    "hours_down": 26.0
+    "hours_down": 31.7
   },
   {
     "stationID": "1:315531",
@@ -1477,7 +1477,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2021-09-13T20:37:43+00:00",
-    "hours_down": 44592.2
+    "hours_down": 44597.9
   },
   {
     "stationID": "1:315561",
@@ -1487,7 +1487,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-10-13T22:38:15+00:00",
-    "hours_down": 46.2
+    "hours_down": 51.9
   },
   {
     "stationID": "1:315761",
@@ -1497,7 +1497,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-06-23T16:10:01+00:00",
-    "hours_down": 2740.6
+    "hours_down": 2746.3
   },
   {
     "stationID": "1:453151",
@@ -1507,7 +1507,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-08-21T02:39:23+00:00",
-    "hours_down": 1338.1
+    "hours_down": 1343.9
   },
   {
     "stationID": "1:453551",
@@ -1517,7 +1517,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-10-14T16:35:45+00:00",
-    "hours_down": 28.2
+    "hours_down": 33.9
   },
   {
     "stationID": "1:454551",
@@ -1527,7 +1527,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2023-01-19T13:56:35+00:00",
-    "hours_down": 32766.9
+    "hours_down": 32772.6
   },
   {
     "stationID": "1:456531",
@@ -1537,7 +1537,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-06-05T12:06:02+00:00",
-    "hours_down": 3176.7
+    "hours_down": 3182.4
   },
   {
     "stationID": "1:457091",
@@ -1547,7 +1547,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-10-14T13:07:05+00:00",
-    "hours_down": 31.7
+    "hours_down": 37.4
   },
   {
     "stationID": "1:5417961",
@@ -1557,7 +1557,7 @@
     "State": "New York",
     "charger_type": "Level 3",
     "since_iso": "2026-03-17T19:36:53+00:00",
-    "hours_down": 5089.2
+    "hours_down": 5094.9
   },
   {
     "stationID": "1:5492371",
@@ -1567,7 +1567,7 @@
     "State": "New York",
     "charger_type": "Level 3",
     "since_iso": "2026-09-25T02:16:26+00:00",
-    "hours_down": 498.5
+    "hours_down": 504.2
   },
   {
     "stationID": "1:5525641",
@@ -1577,7 +1577,7 @@
     "State": "New York",
     "charger_type": "Level 3",
     "since_iso": "2025-02-03T16:23:29+00:00",
-    "hours_down": 14860.4
+    "hours_down": 14866.1
   },
   {
     "stationID": "1:5525701",
@@ -1587,7 +1587,7 @@
     "State": "New York",
     "charger_type": "Level 3",
     "since_iso": "2025-02-03T16:22:57+00:00",
-    "hours_down": 14860.4
+    "hours_down": 14866.1
   },
   {
     "stationID": "1:684251",
@@ -1597,7 +1597,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-08-24T18:55:26+00:00",
-    "hours_down": 1249.9
+    "hours_down": 1255.6
   },
   {
     "stationID": "1:709761",
@@ -1607,7 +1607,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-10-13T23:15:05+00:00",
-    "hours_down": 45.5
+    "hours_down": 51.3
   },
   {
     "stationID": "1:7177831",
@@ -1617,7 +1617,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2022-04-08T18:58:21+00:00",
-    "hours_down": 39625.8
+    "hours_down": 39631.5
   },
   {
     "stationID": "1:725141",
@@ -1627,7 +1627,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-09-18T23:43:48+00:00",
-    "hours_down": 645.1
+    "hours_down": 650.8
   },
   {
     "stationID": "1:72863",
@@ -1637,7 +1637,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2022-01-01T05:46:42+00:00",
-    "hours_down": 41967.0
+    "hours_down": 41972.7
   },
   {
     "stationID": "1:731301",
@@ -1647,7 +1647,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-10-01T05:29:54+00:00",
-    "hours_down": 9111.3
+    "hours_down": 9117.0
   },
   {
     "stationID": "1:784111",
@@ -1657,7 +1657,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-03-10T01:24:14+00:00",
-    "hours_down": 5275.4
+    "hours_down": 5281.1
   },
   {
     "stationID": "1:784451",
@@ -1667,7 +1667,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2025-09-04T21:18:18+00:00",
-    "hours_down": 9743.5
+    "hours_down": 9749.2
   },
   {
     "stationID": "1:789681",
@@ -1677,7 +1677,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-07-22T13:32:52+00:00",
-    "hours_down": 2047.2
+    "hours_down": 2053.0
   },
   {
     "stationID": "1:790201",
@@ -1687,7 +1687,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-09-27T06:17:17+00:00",
-    "hours_down": 446.5
+    "hours_down": 452.2
   },
   {
     "stationID": "1:792581",
@@ -1697,7 +1697,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2024-03-11T14:53:55+00:00",
-    "hours_down": 22757.9
+    "hours_down": 22763.6
   },
   {
     "stationID": "1:7980111",
@@ -1707,7 +1707,7 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2026-08-30T03:33:21+00:00",
-    "hours_down": 1121.2
+    "hours_down": 1127.0
   },
   {
     "stationID": "1:8221781",
@@ -1717,7 +1717,7 @@
     "State": "New York",
     "charger_type": "Level 3",
     "since_iso": "2026-08-25T00:23:39+00:00",
-    "hours_down": 1244.4
+    "hours_down": 1250.1
   },
   {
     "stationID": "1:89219",
@@ -1727,6 +1727,6 @@
     "State": "New York",
     "charger_type": "Level 2",
     "since_iso": "2022-03-02T05:23:07+00:00",
-    "hours_down": 40527.4
+    "hours_down": 40533.1
   }
 ]
